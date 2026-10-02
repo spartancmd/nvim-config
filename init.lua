@@ -27,6 +27,9 @@ if vim.g.vscode then
     vim.keymap.set("n", "<S-h>", function()
         vim.fn.VSCodeNotify("workbench.action.previousEditorInGroup")
     end)
+    vim.keymap.set("n", "za", function()
+        vim.fn.VSCodeNotify("editor.toggleFold")
+    end)
 
     require("core.lazy")
 
