@@ -7,8 +7,8 @@ opt.signcolumn = "yes" -- reserves space left to line number for characters from
 
 -- indentation
 opt.expandtab = true -- converts tab-press into spaces
-opt.shiftwidth = 4 -- number of spaces for each indentation
-opt.tabstop = 4 -- width of a \t character
+opt.shiftwidth = 2 -- number of spaces for each indentation
+opt.tabstop = 2 -- width of a \t character
 opt.smartindent = true -- auto indentation when new line
 
 -- search
@@ -33,7 +33,7 @@ opt.mouse = "a" -- full mouse handling by neovim
 
 -- clipboard
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+    vim.o.clipboard = "unnamedplus"
 end)
 
 -- undo files
@@ -55,8 +55,8 @@ opt.foldmethod = "manual"
 
 -- when using windows, setup terminal
 if vim.uv.os_uname().sysname == "Windows_NT" then
-	opt.shell = "pwsh"
-	opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
-	opt.shellquote = ""
-	opt.shellxquote = ""
+    opt.shell = "pwsh"
+    opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+    opt.shellquote = ""
+    opt.shellxquote = ""
 end
